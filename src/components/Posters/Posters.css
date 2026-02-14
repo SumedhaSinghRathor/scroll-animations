@@ -1,0 +1,135 @@
+.background-poster {
+  user-select: none;
+  font-family: "Arial", sans-serif;
+  background-color: #e3e3db;
+  overflow: hidden;
+}
+
+.background-poster a,
+.background-poster p {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+.background-poster nav,
+.background-poster footer {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  mix-blend-mode: difference;
+  z-index: 1000;
+}
+
+.background-poster nav {
+  top: 0;
+}
+
+.background-poster footer {
+  bottom: 0;
+}
+
+.background-poster .links,
+.background-poster .socials {
+  display: flex;
+  gap: 2em;
+}
+
+.background-poster nav > *,
+.background-poster .links a {
+  flex: 1;
+}
+
+.background-poster .container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.background-poster .canvas {
+  position: absolute;
+  will-change: transform;
+}
+
+.background-poster .item {
+  position: absolute;
+  width: 120px;
+  height: 180px;
+  overflow: hidden;
+  background-color: white;
+  cursor: pointer;
+}
+
+.background-poster .expanded-item {
+  position: fixed;
+  z-index: 2000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e3e3db;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.background-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.background-poster .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e3e3db;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  z-index: 999;
+}
+
+.background-poster .overlay.active {
+  pointer-events: none;
+  opacity: 1;
+}
+
+.background-poster .project-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+  z-index: 1500;
+}
+
+.background-poster .project-title p {
+  position: relative;
+  height: 42px;
+  color: #000;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.background-poster .project-title p .word {
+  position: relative;
+  display: inline-block;
+  font-family: "Arial Narrow", sans-serif;
+  font-size: 36px;
+  letter-spacing: -0.02rem;
+  margin-right: 0.1em;
+  transform: translateY(0%);
+}

@@ -1,0 +1,69 @@
+:root {
+  --color-white: #fff;
+  --color-light-grey: #4a4a4a;
+  --color-dark-grey: #141414;
+  --color-black: #040404;
+}
+
+.background-shuffle {
+  font-family: "Instrument Serif", serif;
+}
+
+.background-shuffle h1 {
+  font-size: clamp(3rem, 5vw, 7vw);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.025rem;
+}
+
+.background-shuffle section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+.background-shuffle section h1 {
+  width: 45%;
+  text-align: center;
+  will-change: opacity;
+  z-index: 2;
+}
+
+.background-shuffle .intro,
+.background-shuffle .outro {
+  background-color: var(--color-black);
+}
+
+.background-shuffle .gallery {
+  background-color: var(--color-dark-grey);
+}
+
+.background-shuffle .card {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  border-radius: 1rem;
+  border: 0.5rem solid var(--color-light-grey);
+  box-sizing: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  will-change: transform;
+  overflow: hidden;
+}
+
+.background-shuffle .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 1000px) {
+  .background-shuffle section h1 {
+    width: 100%;
+    padding: 2rem;
+  }
+}

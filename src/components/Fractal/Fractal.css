@@ -1,0 +1,73 @@
+.background-fractal {
+  font-family: "Manrope", sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.background-fractal h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: -0.1rem;
+}
+
+.background-fractal a,
+.background-fractal p {
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 550;
+  line-height: 1;
+  display: inline-block;
+}
+
+.background-fractal nav {
+  position: fixed;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 2;
+}
+
+.background-fractal nav .nav-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.background-fractal .hero {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.background-fractal .hero img#glassTexture {
+  display: none;
+}
+
+.background-fractal .hero-content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.background-fractal .hero-content h1 {
+  width: 60%;
+}
+
+@media (max-width: 1000px) {
+  .background-fractal .hero-content {
+    align-items: flex-start;
+    flex-direction: column-reverse;
+  }
+
+  .background-fractal .hero-content h1 {
+    width: 100%;
+  }
+}
